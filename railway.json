@@ -1,0 +1,11 @@
+{
+    "build": {
+      "env": {
+        "DB_URL": "your-database-url"
+      }
+    },
+    "start": {
+      "command": "php -S 0.0.0.0:PORT -t pages"
+    }
+  }
+  
