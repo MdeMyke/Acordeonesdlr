@@ -1,9 +1,9 @@
 <?php
 // config.php
-$host = $_ENV['MYSQL_HOST'];
-$db = $_ENV['MYSQL_DATABASE'];
-$user = $_ENV['MYSQL_USER'];
-$pass = $_ENV['MYSQL_PASSWORD'];
+$host = 'localhost';
+$db = 'veterinariabd';
+$user = 'root'; // Cambia a tu usuario
+$pass = ''; // Cambia a tu contraseña
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
@@ -12,3 +12,5 @@ try {
     die("Error de conexión: " . $e->getMessage());
 }
 ?>
+
+
