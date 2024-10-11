@@ -3,7 +3,7 @@ include '../config/config.php';
 
 try {
     // Consulta a la base de datos
-    $sql = "SELECT * FROM productos WHERE es_oferta = true";
+    $sql = "SELECT * FROM productos WHERE es_oferta = 1";
     $stmt = $pdo->query($sql);
 
     // Obtener todos los productos
@@ -169,7 +169,7 @@ try {
     <?php
     // Realiza la consulta para obtener solo productos en oferta
     try {
-        $sql = "SELECT * FROM productos WHERE es_oferta = TRUE;";
+        $sql = "SELECT * FROM productos WHERE es_oferta = 1;";
         $stmt = $pdo->query($sql);
         $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
