@@ -169,7 +169,7 @@ try {
     <?php
     // Realiza la consulta para obtener solo productos en oferta
     try {
-        $sql = "SELECT * FROM productos WHERE es_oferta = 1";
+        $sql = "SELECT * FROM productos WHERE es_oferta = TRUE;";
         $stmt = $pdo->query($sql);
         $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
