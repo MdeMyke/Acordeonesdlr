@@ -1,0 +1,92 @@
+.navbar-top {
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    align-items: center;
+    z-index: 9999; /* Asegura que nada se superponga */
+    
+}
+.navbar-top img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%; /* Hacer la imagen circular */
+}
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+.navbar-right a {
+    color: black;
+    text-decoration: none;
+    padding: 8px 12px;
+    text-align: center;
+    margin-left: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra en el texto */
+}
+.navbar-right a:hover {
+    color: #fce7bc; /* Color al pasar el ratón sobre los botones */
+}
+.login-button, .register-button, .home-button {
+    background-color: #fce7bc;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.login-button:hover, .register-button:hover, .home-button:hover {
+    background-color: #e5d6a7;
+}
+
+/* Estilos para la segunda barra de navegación (deslizable) */
+.navbar-bottom {
+    display: flex;
+    overflow-x: auto; /* Permitir deslizar horizontalmente */
+    white-space: nowrap;
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    top: 4rem;
+    left: 0;
+    padding: 1rem;
+    align-items: center;
+    z-index: 9999; /* Mantener esta barra por encima de todo */
+}
+.navbar-bottom a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    text-align: center;
+    margin-left: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra en el texto */
+    font-size: 36px; /* Aumentar el tamaño de la fuente */
+}
+.navbar-bottom a:hover {
+    color: #fce7bc; /* Cambiar al color de la página */
+}
+.navbar-bottom a:active {
+    color: #fce7bc; /* Cambiar al color de la página cuando se presiona */
+}
+
+/* Título en lugar del botón "Inicio" */
+.navbar-title {
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra en el título */
+    margin-right: auto; /* Mantener el título a la izquierda en pantallas grandes */
+}
+
+.solid-background {
+    background-color: #edc158; /* Color de fondo sólido con opacidad */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Ajustar el contenido para que no se superponga con la barra de navegación */
+body {
+    padding-top: 6rem; /* Asegura que el contenido no quede detrás de las barras */
+}

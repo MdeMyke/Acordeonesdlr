@@ -1,0 +1,87 @@
+sectiona {
+    block-size: auto;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta las tarjetas a un tamaño más grande */
+    margin: 2rem auto 5rem;
+    padding: 0 1rem;
+    max-inline-size: 1200px; /* Limitar el ancho de la sección */
+}
+
+article {
+    display: block; /* Mostrar las tarjetas correctamente */
+    margin: 0;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    max-inline-size: 300px; /* Cambiar el tamaño máximo de las tarjetas */
+}
+
+article img {
+    width: 100%; /* Ocupar todo el ancho del contenedor */
+    height: auto; /* Mantener la proporción original de la imagen */
+    border-radius: 0.25rem;
+    display: block;
+    object-fit: cover; /* Ajustar las imágenes al tamaño sin distorsión */
+}
+
+article h2 {
+    color: #333;
+    font-size: 1.25rem; /* Aumentar el tamaño del título */
+    font-weight: 500;
+    margin: 0.5rem 0;
+}
+
+article .price {
+    font-size: 1.25rem; /* Aumentar el tamaño del precio */
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 0.75rem;
+}
+
+article .categories {
+    font-size: 0.85rem; /* Tamaño adecuado para las categorías */
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    background-color: #edc158;
+}
+
+article .actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.buy-button {
+    background-color: #d35400;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.buy-button:hover {
+    background-color: #f39c12;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    sectiona {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    article {
+        max-inline-size: 200px; /* Ajuste para pantallas pequeñas */
+    }
+
+    .buy-button {
+        font-size: 0.85rem;
+    }
+}

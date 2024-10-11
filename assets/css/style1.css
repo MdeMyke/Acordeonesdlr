@@ -1,0 +1,132 @@
+@layer library, reset, base, utilities, components, layout, override;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+.layer {
+  background-color: white;
+  display: grid;
+  min-block-size: 800px;
+  padding-block: 2rem;
+  padding-inline: 2rem;
+  place-items: center;
+}
+
+.container {
+  container-type: inline-size;
+  position: relative;
+  display: grid;
+  inline-size: min(100%, 1064px);
+}
+
+.slider {
+  -ms-overflow-style: none;
+  border-radius: 0.5rem;
+  display: grid;
+  grid-auto-flow: column;
+  inline-size: 100%;
+  overflow-x: auto;
+  position: relative;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.card {
+  background-image: linear-gradient(122deg, lavenderblush, lavender);
+  border-radius: 0.5rem;
+  display: grid;
+  gap: 1rem;
+  inline-size: 100cqi;
+  padding: 1.5rem;
+  place-items: start;
+  scroll-snap-align: start;
+}
+
+.visual {
+  aspect-ratio: 1;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.img {
+  block-size: 100%;
+  inline-size: 100%;
+  object-fit: cover;
+}
+
+.content {
+  display: grid;
+  gap: 1rem;
+}
+
+.meta {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.desc {
+  font-size: 1rem;
+}
+
+.card-actions {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.common-btn {
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+.primary {
+  background-color: deepskyblue;
+  color: white;
+}
+
+.slider-controls {
+  display: grid;
+  place-items: center;
+  padding-block: 2rem;
+}
+
+.slider-controls-wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+}
+
+.control-button {
+  border-radius: 50%;
+  display: inline-grid;
+  padding: 0.5rem;
+}
+
+.pagination {
+  display: grid;
+  place-items: center;
+}
+
+.pagination-wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 0.5rem;
+}
+
+.marker {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  block-size: 8px;
+  inline-size: 8px;
+}
+
+.marker-1.active,
+.marker-2.active,
+.marker-3.active {
+  background-color: black;
+}
