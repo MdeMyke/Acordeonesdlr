@@ -134,7 +134,7 @@
     <button class="arrow right-arrow">&#9654;</button>
     <div class="productos-container">
         <?php
-        include 'config/config.php';
+        include '../config/config.php';
 
         try {
             $sql = "SELECT * FROM productos";
@@ -142,7 +142,7 @@
 
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                 echo '<div class="card">';
-                echo '<img src="uploads/productos/' . $row['foto_producto'] . '" alt="' . htmlspecialchars($row['nombre_producto']) . '">';
+                echo '<img src="../uploads/productos/' . $row['foto_producto'] . '" alt="' . htmlspecialchars($row['nombre_producto']) . '">';
                 echo '<h2>' . htmlspecialchars($row['nombre_producto']) . '</h2>';
                 echo '<p>Precio: $' . number_format($row['precio_producto'], 2) . '</p>';
                 echo '<p>Cantidad disponible: ' . $row['cantidad_producto'] . '</p>';

@@ -39,7 +39,7 @@
 </head>
 <body>
     <button class="fixed-button" onclick="window.open('https://wa.me/14088166630?text=¡Hola!%20Tengo%20una%20pregunta%20de%20Accesrios%20para%20acordeones%20de%20la%20', '_blank')">
-        <img src="assets/img/WhatsappButton.png" alt="WhatsApp">
+        <img src="../assets/img/WhatsappButton.png" alt="WhatsApp">
     </button>
 </body>
 </html>

@@ -2,7 +2,7 @@
 // ofertas.php
 
 // Incluir el archivo de configuración para la conexión a la base de datos
-include 'config/config.php';
+include '../config/config.php';
 ?>
 
 <!DOCTYPE html>
@@ -175,7 +175,7 @@ include 'config/config.php';
 
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                 $cards[] = '<div class="card1">
-                                <img src="uploads/productos/' . $row['foto_producto'] . '" alt="' . $row['nombre_producto'] . '">
+                                <img src="../uploads/productos/' . $row['foto_producto'] . '" alt="' . $row['nombre_producto'] . '">
                                 <div class="card1-content">
                                     <h2>' . $row['nombre_producto'] . '</h2>
                                     <p>' . $row['descripcion_producto'] . '</p>

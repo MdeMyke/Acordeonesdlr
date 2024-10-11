@@ -166,12 +166,12 @@
             <div class="mi-social-buttons">
                 <div class="mi-social-button">
                     <a href="https://www.facebook.com/profile.php?id=61566787599825" target="_blank">
-                        <img src="assets/img/face.png" alt="Facebook">
+                        <img src="../assets/img/face.png" alt="Facebook">
                     </a>
                 </div>
                 <div class="mi-social-button">
                     <a href="https://www.instagram.com/accordionsdlr/" target="_blank">
-                        <img src="assets/img/insta.png" alt="Instagram">
+                        <img src="../assets/img/insta.png" alt="Instagram">
                     </a>
                 </div>
             </div>

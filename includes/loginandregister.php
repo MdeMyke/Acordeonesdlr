@@ -284,14 +284,14 @@ footer a {
 <body>
 
 <div class="header">
-    <img src="assets/img/logo.jpg" alt="Logo" class="header-image">
+    <img src="../assets/img/logo.jpg" alt="Logo" class="header-image">
     <h1 class="header-title">Welcome to Accessories for la rossa accordions</h1>
 </div>
 
 <div class="container" id="container">
     <!-- Registration Form -->
     <div class="form-container sign-up-container">
-        <form action="pages/register.php" method="POST">
+        <form action="../pages/register.php" method="POST">
             <h1>Create Account</h1>
             <input type="text" name="username" placeholder="Username" required>
             <input type="email" name="email" placeholder="Email" required>
@@ -304,7 +304,7 @@ footer a {
 
     <!-- Login Form -->
     <div class="form-container sign-in-container">
-        <form action="pages/login.php" method="POST">
+        <form action="../pages/login.php" method="POST">
             <h1>Sign In</h1>
             <input type="text" name="username" placeholder="Username" required>
             <input type="password" name="password" placeholder="Password" required>

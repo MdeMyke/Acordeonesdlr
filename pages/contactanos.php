@@ -240,7 +240,7 @@
                 <h2>Our WhatsApp</h2>
                 <p>Press the button to contact us:</p>
                 <a aria-label="Chat on WhatsApp" href="https://wa.me/14088166630?text=¡Hola!%20Tengo%20una%20pregunta%20de%20Accesorios%20para%20acordeones%20de%20la%20Rosa" target="_blank">
-                    <img alt="Chat on WhatsApp" src="assets/img/WhatsAppButtonGreenSmall.png" />
+                    <img alt="Chat on WhatsApp" src="../assets/img/WhatsAppButtonGreenSmall.png" />
                 </a>
             </div>
         </div>
