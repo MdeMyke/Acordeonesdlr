@@ -1,9 +1,9 @@
 <?php
 // config.php
-$host = 'autorack.proxy.rlwy.net';
-$db = 'railway'; // Asegúrate de que este es el nombre correcto de tu base de datos
-$user = 'root'; // Cambia a tu usuario si es diferente
-$pass = 'VLDnwyGOyGoxgPuPrPoRGwUTpfxBQjUT'; // Usa la contraseña proporcionada en tu URL
+$host = $_ENV['MYSQL_HOST'];
+$db = $_ENV['MYSQL_DATABASE'];
+$user = $_ENV['MYSQL_USER'];
+$pass = $_ENV['MYSQL_PASSWORD'];
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
