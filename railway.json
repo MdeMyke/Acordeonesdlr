@@ -1,9 +1,0 @@
-{
-    "build": {
-      "image": "railwayapp/nixpacks:latest"
-    },
-    "start": {
-      "command": "php -S 0.0.0.0:3000 -t pages"
-    }
-  }
-  
