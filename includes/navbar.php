@@ -101,15 +101,15 @@
 <body>
 <nav class="navbar-top">
     <div class="navbar-left">
-        <img src="../assets/img/logo.jpg" alt="Logo">
+        <img src="assets/img/logo.jpg" alt="Logo">
     </div>
     <div class="navbar-right">
         <?php if (isset($_SESSION['username'])): ?>
             <span class="welcome-message">Hello again, <?php echo htmlspecialchars($_SESSION['username']); ?>!</span>
-            <a href="../includes/logout.php" class="home-button">Logout</a>
+            <a href="includes/logout.php" class="home-button">Logout</a>
         <?php else: ?>
-            <a href="../includes/loginandregister.php#login" class="login-button">Login</a>
-            <a href="../includes/loginandregister.php#register" class="register-button">Register</a>
+            <a href="includes/loginandregister.php#login" class="login-button">Login</a>
+            <a href="includes/loginandregister.php#register" class="register-button">Register</a>
         <?php endif; ?>
     </div>
 </nav>
@@ -122,17 +122,17 @@
     // Mostrar diferentes botones dependiendo de la página actual
     if ($current_page == "index.php") {
         echo '<a href="#section4">Who are we?</a>';
-        echo '<a href="../pages/productos.php">Products</a>';
+        echo '<a href="pages/productos.php">Products</a>';
         echo '<a href="#section3">Offers</a>';
         echo '<a href="#section5">Contact us</a>';
     } elseif ($current_page == "productos.php") {
-        echo '<a href="../pages/index.php">Home</a>';
+        echo '<a href="index.php">Home</a>';
         echo '<a href="#section7">Offers</a>';
         echo '<a href="#section11">Filter</a>';
         echo '<a href="#section12">Contact us</a>';
     } elseif ($current_page == "product.php") {
-        echo '<a href="../pages/productos.php">&lt; Return</a>';
-        echo '<a href="../pages/index.php">Home</a>';
+        echo '<a href="pages/productos.php">&lt; Return</a>';
+        echo '<a href="index.php">Home</a>';
     }
     ?>
 </div>

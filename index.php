@@ -7,7 +7,7 @@ session_start();
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/stylenav.css">
+    <link rel="stylesheet" href="assets/css/stylenav.css">
     <title>Principal Page</title>
     <style>
         /* Estilos para la primera barra de navegación (logo, inicio, login, register) */
@@ -31,7 +31,7 @@ session_start();
         /* Sección cuadrada con imagen de fondo */
         #section1 {
             height: 150vh;
-            background-image: url('../assets/img/indeximg22.png');
+            background-image: url('assets/img/indeximg22.png');
             background-size: cover;
             background-position: center;
             position: relative;
@@ -93,7 +93,7 @@ session_start();
 
         #section3 {
             min-height: 30vh;
-            background-image: url('../assets/img/fondobu2.png');
+            background-image: url('assets/img/fondobu2.png');
             background-size: cover;
             background-position: center;
         }
@@ -119,7 +119,7 @@ session_start();
 
         #section5 {
             min-height: 50vh;
-            background-image: url('../assets/img/fondorebu.png');
+            background-image: url('assets/img/fondorebu.png');
             background-size: cover;
             background-position: center;
         }
@@ -319,9 +319,9 @@ session_start();
     </style>
 </head>
 <body>
-<?php include '../includes/navbar.php'; ?>
+<?php include 'includes/navbar.php'; ?>
 <div>
-<?php include '../pages/botonfixed.php'; ?>
+<?php include 'pages/botonfixed.php'; ?>
 </div>
 
 
@@ -329,10 +329,10 @@ session_start();
         <h1>Accessories For Accordions De La Rossa</h1>
     </section>
 <section id="section2">
-    <?php include '../pages/cards.php'; ?>
+    <?php include 'pages/cards.php'; ?>
     </section>
     <section id="section3">
-    <?php include '../pages/twocards.php'; ?>
+    <?php include 'pages/twocards.php'; ?>
     </section>
 
     <section id="section4">
@@ -342,7 +342,7 @@ session_start();
 
 
     <section id="section5">
-    <?php include '../pages/contactanos.php'; ?>
+    <?php include 'pages/contactanos.php'; ?>
     </section>
 
     <section id="section6">
@@ -357,7 +357,7 @@ session_start();
 
 
     <footer >
-    <?php include '../includes/footer.php'; ?>
+    <?php include 'includes/footer.php'; ?>
     </footer>
 
 
