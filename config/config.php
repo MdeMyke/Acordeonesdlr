@@ -1,9 +1,9 @@
 <?php
 // config.php
-$host = 'localhost';
-$db = 'veterinariabd';
-$user = 'root'; // Cambia a tu usuario
-$pass = ''; // Cambia a tu contraseña
+$host = 'autorack.proxy.rlwy.net';
+$db = 'railway'; // Asegúrate de que este es el nombre correcto de tu base de datos
+$user = 'root'; // Cambia a tu usuario si es diferente
+$pass = 'VLDnwyGOyGoxgPuPrPoRGwUTpfxBQjUT'; // Usa la contraseña proporcionada en tu URL
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
@@ -12,5 +12,3 @@ try {
     die("Error de conexión: " . $e->getMessage());
 }
 ?>
-
-
