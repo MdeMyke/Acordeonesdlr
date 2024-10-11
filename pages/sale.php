@@ -3,7 +3,7 @@ include '../config/config.php';
 
 try {
     // Consulta a la base de datos
-    $sql = "SELECT * FROM productos WHERE es_oferta = 1";
+    $sql = "SELECT * FROM productos WHERE es_oferta = true";
     $stmt = $pdo->query($sql);
 
     // Obtener todos los productos
