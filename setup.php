@@ -1,6 +1,6 @@
 <?php
 // setup.php
-require 'config/config.php';
+require 'config.php';
 
 try {
     // Iniciar la transacción
@@ -86,7 +86,9 @@ try {
     echo "Tablas creadas y datos insertados correctamente.";
 } catch (Exception $e) {
     // Si hay un error, revertir la transacción
-    $pdo->rollBack();
+    if ($pdo->inTransaction()) {
+        $pdo->rollBack();
+    }
     echo "Error: " . $e->getMessage();
 }
 ?>
