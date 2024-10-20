@@ -81,7 +81,7 @@
             text-align: center;
             margin-left: 10px;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-            font-size: 36px;
+            font-size: 26px;
         }
         .navbar-bottom a:hover {
             color: #fce7bc;
