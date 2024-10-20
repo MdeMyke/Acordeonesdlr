@@ -1,6 +1,6 @@
 <?php
 // setup.php
-require 'config.php';
+require 'config/config.php';
 
 try {
     // Iniciar la transacción
