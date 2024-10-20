@@ -184,7 +184,6 @@ if (isset($_GET['eliminar'])) {
     <div class="usuarios">
         <?php foreach ($usuarios as $usuario): ?>
             <div class="usuario-card">
-                <h3><?php echo $usuario['full_name']; ?></h3>
                 <p>Username: <?php echo $usuario['username']; ?></p>
                 <p>Email: <?php echo $usuario['email']; ?></p>
                 <p>Teléfono: <?php echo $usuario['telefono']; ?></p>
