@@ -1,5 +1,5 @@
 <?php
-require 'config.php'; // Asegúrate de que la ruta sea correcta
+require '../config/config.php'; // Asegúrate de que la ruta sea correcta
 
 try {
     // Eliminar tablas si existen
