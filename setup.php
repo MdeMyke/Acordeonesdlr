@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . 'config/config.php'; // Asegúrate de que la ruta sea correcta
+require 'config/config.php'; // Asegúrate de que la ruta sea correcta
 
 try {
     // Crear tablas
