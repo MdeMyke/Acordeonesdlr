@@ -69,7 +69,7 @@ session_start();
             }
 
             #section1 h1 {
-                font-size: 2.6rem;
+                font-size: 2.4rem;
                 top:70%;
             }
         }
