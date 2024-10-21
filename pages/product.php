@@ -43,6 +43,7 @@ try {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/stylenav.css">
+    <link rel="icon" href="../assets/img/logo1.png" type="img/png">
     <title><?php echo htmlspecialchars($producto['nombre_producto']); ?></title>
     <style>
         /* Estilos generales */
@@ -195,28 +196,28 @@ try {
             }
         }
 
-        .openBtn {
-    background-color: #fca311; /* Verde más atractivo */
-    color: white; /* Texto blanco */
-    border: none;
-    border-radius: 8px; /* Bordes más redondeados */
-    padding: 15px 0; /* Padding vertical, ajusta horizontal si deseas un espacio */
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Efecto suave en el color y transformación */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    width: 100%; /* Hacer que el botón ocupe todo el ancho */
-}
+            .openBtn {
+        background-color: #fca311; /* Verde más atractivo */
+        color: white; /* Texto blanco */
+        border: none;
+        border-radius: 8px; /* Bordes más redondeados */
+        padding: 15px 0; /* Padding vertical, ajusta horizontal si deseas un espacio */
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 1.2rem;
+        transition: background-color 0.3s ease, transform 0.2s ease; /* Efecto suave en el color y transformación */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+        width: 100%; /* Hacer que el botón ocupe todo el ancho */
+        }
 
-.openBtn:hover {
-    background-color: #45a049; /* Color más oscuro al pasar el mouse */
-    transform: scale(1.05); /* Aumentar ligeramente el tamaño al pasar el mouse */
-}
+        .openBtn:hover {
+        background-color: #45a049; /* Color más oscuro al pasar el mouse */
+        transform: scale(1.05); /* Aumentar ligeramente el tamaño al pasar el mouse */
+        }
 
-.openBtn:active {
-    transform: scale(0.95); /* Efecto de "presionar" el botón */
-}
+        .openBtn:active {
+        transform: scale(0.95); /* Efecto de "presionar" el botón */
+        }
 
 
     </style>
@@ -252,10 +253,9 @@ try {
                 // Genera la URL del producto
                 $producto_link = "https://acordeonesdlr-production.up.railway.app/pages/product.php?id=" . $id_producto;
 
-                $mensaje = "Hola, estoy interesado en el producto *$producto_nombre* que cuesta *$ $producto_precio*.\n\n" .
-                    "Puedes ver el producto aquí: $producto_link\n" .  // Usa la variable aquí
-                    "Imagen del producto: $producto_imagen"; // Incluye el enlace a la imagen
-
+                $mensaje = "Hola, estoy interesado en el producto *$producto_nombre* que cuesta *$ $producto_precio*.\n\n\n\n" .
+                    "Puedes ver el producto aquí: $producto_link";
+                    
                 $whatsapp_url = "https://wa.me/14088166630?text=" . $mensaje;
                 ?>
                 <!-- Muestra el botón de WhatsApp -->

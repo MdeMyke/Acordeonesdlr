@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/stylenav.css">
+    <link rel="icon" href="../assets/img/logo1.png" type="img/png">
     <title>AForAccordions De La Rossa</title>
     <style>
         /* Estilos para la primera barra de navegación (logo, inicio, login, register) */
