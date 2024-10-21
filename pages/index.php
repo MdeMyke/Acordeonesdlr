@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,12 +6,12 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/stylenav.css">
-    <title>Principal Page</title>
+    <title>AForAccordions De La Rossa</title>
     <style>
         /* Estilos para la primera barra de navegación (logo, inicio, login, register) */
 
         * {
-            margin: 0;
+            margin: 0;  
             padding: 0;
             box-sizing: border-box;
         }

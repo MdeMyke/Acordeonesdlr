@@ -103,15 +103,6 @@
     <div class="navbar-left">
         <img src="../assets/img/logo.jpg" alt="Logo">
     </div>
-    <div class="navbar-right">
-        <?php if (isset($_SESSION['username'])): ?>
-            <span class="welcome-message">Hello again, <?php echo htmlspecialchars($_SESSION['username']); ?>!</span>
-            <a href="../includes/logout.php" class="home-button">Logout</a>
-        <?php else: ?>
-            <a href="../includes/loginandregister.php#login" class="login-button">Login</a>
-            <a href="../includes/loginandregister.php#register" class="register-button">Register</a>
-        <?php endif; ?>
-    </div>
 </nav>
 
 <div class="navbar-bottom">

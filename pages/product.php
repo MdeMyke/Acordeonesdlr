@@ -1,5 +1,4 @@
 <?php
-session_start();
 include '../config/config.php';
 
 if (isset($_GET['id'])) {
@@ -36,22 +35,6 @@ try {
     exit;
 }
 
-$username = isset($_SESSION['username']) ? $_SESSION['username'] : null;
-
-// Verifica si el usuario está logueado
-if ($username) {
-    // Consulta para verificar si ya existe información de envío para el usuario
-    try {
-        $sql_envio = "SELECT * FROM detalles_envio WHERE username = :username";
-        $stmt_envio = $pdo->prepare($sql_envio);
-        $stmt_envio->execute(['username' => $username]);
-        $detalles_envio = $stmt_envio->fetch(PDO::FETCH_ASSOC);
-    } catch (PDOException $e) {
-        echo "Error: " . $e->getMessage();
-        exit;
-    }
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -82,7 +65,7 @@ if ($username) {
             width: 100%;
             gap: 20px;
             margin: 0 auto;
-            flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+            flex-wrap: wrap;
         }
 
         .card {
@@ -92,7 +75,7 @@ if ($username) {
             overflow: hidden;
             width: 100%;
         }
-
+        
         .product-image {
             flex: 1 1 100%; /* Tomar todo el ancho en pantallas pequeñas */
         }
@@ -166,6 +149,7 @@ if ($username) {
         .related-title {
             text-align: center;
             font-size: 1.5rem;
+            margin-top:80px;
             margin-bottom: 20px;
             color: #333;
         }
@@ -198,29 +182,6 @@ if ($username) {
             margin: 5px 0;
         }
 
-        .openBtn {
-            background-color: greenyellow;
-            border: none;
-            border-radius: 5px;
-            padding: 12px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            text-decoration: none; /* Elimina el subrayado */
-            color: black; /* Establece el color de la letra */
-        }
-
-        .openBtn:hover {
-            background-color: #e5a300;
-        }
-
-        a.openBtn {
-            color: inherit; /* Mantiene el color heredado */
-            text-decoration: none; /* Asegura que no haya subrayado */
-        }
-
         /* Media Queries para Responsividad */
         @media (min-width: 768px) { /* Para pantallas medianas y más grandes */
             .product-image {
@@ -233,6 +194,31 @@ if ($username) {
                 text-align: right; /* Alinear el texto a la derecha */
             }
         }
+
+        .openBtn {
+    background-color: #fca311; /* Verde más atractivo */
+    color: white; /* Texto blanco */
+    border: none;
+    border-radius: 8px; /* Bordes más redondeados */
+    padding: 15px 0; /* Padding vertical, ajusta horizontal si deseas un espacio */
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Efecto suave en el color y transformación */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    width: 100%; /* Hacer que el botón ocupe todo el ancho */
+}
+
+.openBtn:hover {
+    background-color: #45a049; /* Color más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Aumentar ligeramente el tamaño al pasar el mouse */
+}
+
+.openBtn:active {
+    transform: scale(0.95); /* Efecto de "presionar" el botón */
+}
+
+
     </style>
 </head>
 <?php include '../pages/botonfixed.php'; ?>
@@ -257,43 +243,26 @@ if ($username) {
                     <p>Cantidad disponible: <?php echo $producto['cantidad_producto']; ?></p>
                 </div>
 
-                <?php if (!$username): ?>
-                    <script>
-                        // Redirigir a la página de login si no está logueado
-                        document.location.href = '../includes/loginandregister.php';
-                    </script>
-                <?php else: ?>
-                    <?php if ($detalles_envio): ?>
-                        <?php
-                        $nombres = urlencode($detalles_envio['nombres']);
-                        $apellidos = urlencode($detalles_envio['apellidos']);
-                        $telefono = urlencode($detalles_envio['telefono']);
-                        $direccion = urlencode($detalles_envio['direccion']);
-                        $codigo_postal = urlencode($detalles_envio['codigo_postal']);
-                        $producto_nombre = urlencode($producto['nombre_producto']);
-                        $producto_precio = number_format($producto['precio_producto'], 2);
-                        $producto_imagen = urlencode("https://tu-dominio.com/uploads/productos/" . $producto['foto_producto']); // Cambia "tu-dominio.com" por tu dominio real
+                <?php
+                // Enlace al producto en WhatsApp
+                $producto_nombre = urlencode($producto['nombre_producto']);
+                $producto_precio = number_format($producto['precio_producto'], 2);
+                $producto_imagen = urlencode("https://acordeonesdlr-production.up.railway.app/uploads/productos/" . $producto['foto_producto']); // Cambia "tu-dominio.com" por tu dominio real
 
-                        $mensaje = "Hola, estoy interesado en el producto *$producto_nombre* que cuesta *$ $producto_precio*.\n\n" .
-                        "Detalles de envío:\n" .
-                        "Nombre: $nombres $apellidos\n" .
-                        "Teléfono: $telefono\n" .
-                        "Dirección: $direccion\n" .
-                          "Código Postal: $codigo_postal\n\n" .
-                        "Puedes ver el producto aquí: https://tu-dominio.com/product.php?id=$id_producto\n" .
-                        "Imagen del producto: $producto_imagen"; // Incluye el enlace a la imagen
+                // Genera la URL del producto
+                $producto_link = "https://acordeonesdlr-production.up.railway.app/pages/product.php?id=" . $id_producto;
 
-                        $whatsapp_url = "https://wa.me/14088166630?text=" . $mensaje;
-                        ?>
-                        <!-- Muestra el botón de WhatsApp -->
-                        <a aria-label="Chat on WhatsApp" href="<?php echo $whatsapp_url; ?>" target="_blank" class="whatsapp-button">
-                            <button class="openBtn">Buy Now</button>
-                        </a>
-                    <?php else: ?>
-                        <!-- Muestra el formulario si no tiene información -->
-                        <?php include '../pages/form_envio.php'; ?>
-                    <?php endif; ?>
-                <?php endif; ?>
+                $mensaje = "Hola, estoy interesado en el producto *$producto_nombre* que cuesta *$ $producto_precio*.\n\n" .
+                    "Puedes ver el producto aquí: $producto_link\n" .  // Usa la variable aquí
+                    "Imagen del producto: $producto_imagen"; // Incluye el enlace a la imagen
+
+                $whatsapp_url = "https://wa.me/14088166630?text=" . $mensaje;
+                ?>
+                <!-- Muestra el botón de WhatsApp -->
+                <a aria-label="Chat on WhatsApp" href="<?php echo $whatsapp_url; ?>" target="_blank" class="whatsapp-button">
+                <button class="openBtn">Buy Now</button>
+                </a>
+
             </div>
         </div>
     </section>
