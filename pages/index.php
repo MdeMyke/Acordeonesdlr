@@ -42,7 +42,7 @@ session_start();
             font-size: 4rem;
             color: white;
             position: absolute;
-            top: 60%;
+            top: 58%;
             left: 50%;
             transform: translate(-50%, -50%);
             opacity: 0;
